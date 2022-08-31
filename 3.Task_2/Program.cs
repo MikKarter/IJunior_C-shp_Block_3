@@ -4,57 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3.Task_2
+namespace _3.Task_3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Random randomNumberForArray= new Random();
-            Console.WriteLine("Please imput numbers of rows");
-            int rows = Convert.ToInt32(Console.ReadLine());
+            Random randomNumberForArray = new Random();
             Console.WriteLine("Please imput numbers of columsn");
             int columns = Convert.ToInt32(Console.ReadLine());
-            int[,] testArray = new int [rows, columns];
-            int maxNumberOfArray = int.MinValue;
-            
-            for (int i = 0; i < testArray.GetLength(0); i++)
+            int[] testArray = new int[columns];
+
+            for (int i = 0; i < testArray.Length; i++)
             {
-                for (int j = 0; j < testArray.GetLength(1); j++)
-                {
-                    testArray[i,j] = randomNumberForArray.Next (1, 100);
-                    Console.Write(testArray[i, j] + " ");
-                }
-                Console.WriteLine();
+                testArray[i] = randomNumberForArray.Next(0, 11);
+                Console.Write(testArray[i] + " ");
             }
 
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
 
-            for (int i = 0; i < testArray.GetLength(0); i++)
+            if (testArray[testArray.Length-testArray.Length] > testArray[testArray.Length - testArray.Length+1])
             {
-                for (int j = 0; j < testArray.GetLength(1); j++)
-                {
-                    if (maxNumberOfArray < testArray[i,j])
-                    {
-                        maxNumberOfArray = testArray[i,j];
-                    }
-                }
+                Console.Write(testArray[testArray.Length - testArray.Length + 1] + " ");
+
             }
 
-            for (int i = 0; i < testArray.GetLength(0); i++)
+            if (testArray[testArray.Length - 1] > testArray[testArray.Length - 2])
             {
-                for (int j = 0; j < testArray.GetLength(1); j++)
+                Console.Write(testArray[testArray.Length - 1] + " ");
+
+            }
+
+            for (int i = 0; i < (testArray.Length); i++)
+            {
+                if (i != (testArray.Length - 1) & i != (testArray.Length - testArray.Length))
                 {
-                    if (maxNumberOfArray == testArray[i,j])
+                    if (testArray[i] > testArray[i - 1] & testArray[i] > testArray[(i + 1)])
                     {
-                        testArray[i, j] = 0;
+                        Console.Write(testArray[i] + " ");
                     }
-                    
-                    Console.Write(testArray[i, j] + " ");
                 }
-                Console.WriteLine();
             }
         }
     }
