@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,31 +25,25 @@ namespace _3.Task_3
             Console.WriteLine();
             Console.WriteLine();
 
-            for (int i = 0; i < (testArray.Length); i++)
+            if (testArray[testArray.Length - testArray.Length] > testArray[testArray.Length - testArray.Length + 1])
             {
-                if (i == 0 & testArray[i] > testArray[testArray.Length - testArray.Length+1])
+                Console.Write(testArray[testArray.Length - testArray.Length] + " ");
+
+            }
+
+            if (testArray[testArray.Length - 1] > testArray[testArray.Length - 2])
+            {
+                Console.Write(testArray[testArray.Length - 1] + " ");
+
+            }
+
+            for (int i = testArray.Length-testArray.Length+1; i < testArray.Length & i != (testArray.Length - 1) & i != (testArray.Length - testArray.Length); i++)
+            {
+                if (testArray[i] > testArray[i - 1] & testArray[i] > testArray[(i + 1)])
                 {
                     Console.Write(testArray[i] + " ");
-
-                }
-
-                if (i == testArray.Length - 1 & testArray[testArray.Length - 2] < testArray[i])
-                {
-                    Console.Write(testArray[i] + " ");
-                }
-
-                if (i != (testArray.Length - 1) & i != (testArray.Length - testArray.Length))
-                {
-                    if (testArray[i] > testArray[i - 1] & testArray[i] > testArray[(i + 1)])
-                    {
-                        Console.Write(testArray[i] + " ");
-                    }
                 }
             }
         }
     }
 }
-
-
-
-
