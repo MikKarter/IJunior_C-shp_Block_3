@@ -11,12 +11,10 @@ namespace _3.Task_2
         static void Main(string[] args)
         {
             Random randomNumberForArray= new Random();
-
             Console.WriteLine("Please imput numbers of rows");
             int rows = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please imput numbers of columsn");
             int columns = Convert.ToInt32(Console.ReadLine());
-
             int[,] testArray = new int [rows, columns];
             int maxNumberOfArray = int.MinValue;
             
@@ -56,7 +54,6 @@ namespace _3.Task_2
                     
                     Console.Write(testArray[i, j] + " ");
                 }
-                
                 Console.WriteLine();
             }
         }
