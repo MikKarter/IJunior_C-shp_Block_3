@@ -29,25 +29,23 @@ namespace _3.Task_1
             {
                 for (int j = 0; j < testArray.GetLength(1); j++)
                 {
-                    testArray[i,j] = randomNumber.Next(firstNumberForRandom, secondNumberForRandom);
+                    testArray[i, j] = randomNumber.Next(firstNumberForRandom, secondNumberForRandom);
                     Console.Write(testArray[i, j] + " ");
                 }
 
                 Console.WriteLine();
             }
 
-            for (int i = 0; i < testArray.GetLength(0); i++)
+            for (int j = 0; j < testArray.GetLength(1); j++)
             {
-                for (int j = 0; j < testArray.GetLength(1); j++)
-                {
-                    sumNumbers += testArray[rowTestArray, j];
-                }
+                sumNumbers += testArray[rowTestArray, j];
             }
+
 
             for (int i = 0; i < testArray.GetLength(0); i++)
             {
                 multiplicationNumbers *= testArray[i, columnTestArray];
-            }          
+            }
 
             Console.WriteLine(multiplicationNumbers);
             Console.WriteLine(sumNumbers);
