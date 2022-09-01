@@ -12,12 +12,12 @@ namespace _3.Task_4
         {
             int[] numberArray = new int[1];
 
-            const string sumNumber = "sum";
-            const string finishProgramm = "exit";
+            const string SumNumber = "sum";
+            const string FinishProgramm = "exit";
             string userInput = "";
-            bool workingUser = true;
+            bool isWorking = true;
 
-            while (workingUser)
+            while (isWorking)
             {
                 Console.WriteLine("Input number fo add it to sum");
                 Console.WriteLine("Input sum to show sum all you numbers");
@@ -37,7 +37,7 @@ namespace _3.Task_4
                     numberArray = extendedNumberArray;
                     numberArray[numberArray.Length - 1] = Convert.ToInt32(userInput);
                 }
-                else if (userInput == sumNumber)
+                else if (userInput == SumNumber)
                 {
                     int summNumbers = 0;
 
@@ -48,9 +48,9 @@ namespace _3.Task_4
 
                     Console.WriteLine("Sum you numbers is " + summNumbers);
                 }
-                else if (userInput == finishProgramm)
+                else if (userInput == FinishProgramm)
                 {
-                    workingUser = false;
+                    isWorking = false;
                 }
             }
         }
