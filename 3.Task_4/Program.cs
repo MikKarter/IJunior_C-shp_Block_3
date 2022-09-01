@@ -28,14 +28,17 @@ namespace _3.Task_4
                     numberArray[0] = Convert.ToInt32(userInput);
                     int[] extendedNumberArray = new int[numberArray.Length + 1];
 
-                    for (int i = 0; i < numberArray.Length; i++)
+                    if (numberArray.Length > 0)
                     {
-                        extendedNumberArray[i] = numberArray[i];
+                        for (int i = 0; i < numberArray.Length; i++)
+                        {
+                            extendedNumberArray[i] = numberArray[i];
+                        }
                     }
 
                     extendedNumberArray[extendedNumberArray.Length - 1] = numberArray[0];
                     numberArray = extendedNumberArray;
-                    extendedNumberArray[extendedNumberArray.Length - extendedNumberArray.Length] = 0;
+                    numberArray[0] = 0;
                 }
 
                 else if (Convert.ToString(userInput) == "sum")
