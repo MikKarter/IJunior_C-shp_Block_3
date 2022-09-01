@@ -10,10 +10,10 @@ namespace _3.Task_4
     {
         static void Main(string[] args)
         {
-            int[] numberArray = new int[1];
-
             const string SumNumber = "sum";
             const string FinishProgramm = "exit";
+
+            int[] numberArray = new int[0];
             string userInput = "";
             bool isWorking = true;
 
