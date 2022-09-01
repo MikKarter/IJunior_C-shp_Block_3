@@ -45,11 +45,9 @@ namespace _3.Task_4
                     for (int i = 0; i < numberArray.Length; i++)
                     {
                         summNumbers += numberArray[i];
-
                     }
 
                     Console.WriteLine("Sum you numbers is " + summNumbers);
-                    summNumbers = 0;
                 }
 
                 else if (Convert.ToString(userInput) == "exit")
