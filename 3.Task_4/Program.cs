@@ -12,6 +12,8 @@ namespace _3.Task_4
         {
             int[] numberArray = new int[1];
 
+            string sumNumber = "sum";
+            string finishProgramm = "exit";
             string userInput = "";
             bool workingUser = true;
 
@@ -25,23 +27,17 @@ namespace _3.Task_4
 
                 if (userInput != "sum" && userInput != "exit")
                 {
-                    numberArray[0] = Convert.ToInt32(userInput);
                     int[] extendedNumberArray = new int[numberArray.Length + 1];
 
-                    if (numberArray.Length > 0)
+                    for (int i = 0; i < numberArray.Length; i++)
                     {
-                        for (int i = 0; i < numberArray.Length; i++)
-                        {
-                            extendedNumberArray[i] = numberArray[i];
-                        }
+                        extendedNumberArray[i] = numberArray[i];
                     }
 
-                    extendedNumberArray[extendedNumberArray.Length - 1] = numberArray[0];
                     numberArray = extendedNumberArray;
-                    numberArray[0] = 0;
+                    numberArray[numberArray.Length - 1] = Convert.ToInt32(userInput);
                 }
-
-                else if (Convert.ToString(userInput) == "sum")
+                else if (userInput == sumNumber)
                 {
                     int summNumbers = 0;
 
@@ -52,8 +48,7 @@ namespace _3.Task_4
 
                     Console.WriteLine("Sum you numbers is " + summNumbers);
                 }
-
-                else if (Convert.ToString(userInput) == "exit")
+                else if (userInput == finishProgramm)
                 {
                     workingUser = false;
                 }
