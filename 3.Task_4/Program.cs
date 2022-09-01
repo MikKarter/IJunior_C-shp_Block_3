@@ -14,7 +14,7 @@ namespace _3.Task_4
             const string FinishProgramm = "exit";
 
             int[] numberArray = new int[0];
-            string userInput = "";
+            string userInput;
             bool isWorking = true;
 
             while (isWorking)
