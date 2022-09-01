@@ -12,8 +12,8 @@ namespace _3.Task_4
         {
             int[] numberArray = new int[1];
 
-            string sumNumber = "sum";
-            string finishProgramm = "exit";
+            const string sumNumber = "sum";
+            const string finishProgramm = "exit";
             string userInput = "";
             bool workingUser = true;
 
