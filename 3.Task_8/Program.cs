@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +25,9 @@ namespace _3.Task_8
             }
 
             Console.WriteLine("input amount step for change position:");
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            int valueOfShearSteps = Convert.ToInt32(Console.ReadLine());
 
-            for (int changePosition = 0; changePosition < userInput; changePosition++)
+            for (int changePosition = 0; changePosition < valueOfShearSteps; changePosition++)
             {
                 for (int i = 0; i < 1; i++)
                 {
@@ -35,11 +35,8 @@ namespace _3.Task_8
 
                     for (int j = 0; j < numberArray.Length - 1; j++)
                     {
-
-                        int tempNumber = numberArray[j];
                         numberArray[j] = numberArray[j + 1];
                     }
-
                     numberArray[numberArray.Length - 1] = firtsNumber;
                 }
             }
