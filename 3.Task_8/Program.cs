@@ -29,16 +29,14 @@ namespace _3.Task_8
 
             for (int changePosition = 0; changePosition < valueOfShearSteps; changePosition++)
             {
-                for (int i = 0; i < 1; i++)
-                {
                     int firtsNumber = numberArray[0];
 
                     for (int j = 0; j < numberArray.Length - 1; j++)
                     {
                         numberArray[j] = numberArray[j + 1];
                     }
+
                     numberArray[numberArray.Length - 1] = firtsNumber;
-                }
             }
 
             for (int i = 0; i < numberArray.Length; i++)
